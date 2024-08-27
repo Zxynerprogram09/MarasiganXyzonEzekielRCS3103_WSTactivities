@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domino's Pizza List</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ff4d4d 50%, #4da6ff 50%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        ol.main-list {
+            counter-reset: section;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ol.main-list > li {
+            counter-increment: section;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        ol.main-list > li::before {
+            content: counter(section) ". ";
+            font-size: 1.5em;
+            color: yellow;
+        }
+
+        ol.sub-list, ul {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        ol.sub-list > li, ul > li {
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        ol.sub-list {
+            list-style-type: lower-alpha;
+        }
+
+        ol.sub-list ol {
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ol class="main-list">
+            <li>I. Domino's Pizza
+                <ol class="sub-list">
+                    <li>Best Sellers
+                        <ul>
+                            <li>American Bacon Cheeseburger
+                                <ol type="1">
+                                    <li>Cheese</li>
+                                    <li>Bacon</li>
+                                    <li>Beef</li>
+                                </ol>
+                            </li>
+                            <li>Spinach and Feta
+                                <ol type="1">
+                                    <li>Spinach</li>
+                                    <li>Feta</li>
+                                    <li>Cheese</li>
+                                </ol>
+                            </li>
+                            <li>Ultimate Pepperoni
+                                <ol type="1">
+                                    <li>Pepperoni</li>
+                                    <li>Cheese</li>
+                                    <li>Sauce</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Greetings
+                        <ul>
+                            <li>Pizza Great Day, See Us Again</li>
+                        </ul>
+                    </li>
+                    <li>Standards
+                        <ul>
+                            <li>Green - Food Contact</li>
+                            <li>Yellow - Dine-in Area</li>
+                            <li>Blue - Dust</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+
+            <li>II. Personnel
+                <ol class="sub-list">
+                    <li>Sir Jin - OIC
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>Ma'am Chin - Shift Manager
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>Xyzon Marasigan - Team Member
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
