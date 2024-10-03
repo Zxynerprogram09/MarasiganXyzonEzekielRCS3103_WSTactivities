@@ -1,0 +1,45 @@
+/* Styling the body with a GIF background */
+body {
+    font-family: Arial, sans-serif;
+    background: url('Mario.gif') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Flexbox container for the boxes */
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    /*z-index: 1;  Ensures the content is above the background */
+}
+
+/* Styling/* each info box */
+.box {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    z-index: 2;
+}
+
+/* Styling headers inside the boxes */
+.box h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Text inside the boxes */
+.box p {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
+}
