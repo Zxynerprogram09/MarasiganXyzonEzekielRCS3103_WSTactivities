@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c1e012;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .vision-board {
+            background-color: rgb(7, 135, 215);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #181f1c;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #81dc09;
+            margin-bottom: 20px;
+        }
+
+        .goals {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .goals li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #eeffe0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .goals li:hover {
+            background-color: #d6ffc1;
+            transform: scale(1.1);
+        }
+
+        .highlight {
+            background-color: #ffe680 !important;
+            transform: scale(1.15);
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .image-section img {
+            width: 100px;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-section img.highlight {
+            border: 3px solid #ffe680;
+            transform: scale(1.25);
+        }
+    </style>
+</head>
+<body>
+
+<div class="vision-board">
+    <h1>Xyzon Ezekiel R. Marasigan's Vision Board</h1>
+    <h2>Daily Reminder: "Strive for progress, not perfection."</h2>
+
+    <div class="image-section" id="image-section">
+        <img src="Graduation.jpg" alt="Graduation">
+        <img src="Luxury life.jpg" alt="Luxury life">
+        <img src="Poor.jpg" alt="Poor">
+        <img src="Family 2.jpg" alt="Family 2">
+        <img src="Family.jpg" alt="Family">
+    </div>
+
+    <ul class="goals" id="goals-list">
+        <li>Graduate</li>
+        <li>Have a Luxury life</li>
+        <li>Create a family</li>
+        <li>Make my parents and Grandma happy</li>
+        <li>Help other people</li>
+    </ul>
+</div>
+
+<script>
+    // Select all goals list items
+    const goals = document.querySelectorAll('.goals li');
+
+    // Add click event listener to each goal
+    goals.forEach(goal => {
+        goal.addEventListener('click', () => {
+            // Toggle the highlight class on click
+            goal.classList.toggle('highlight');
+        });
+    });
+
+    // Select all images
+    const images = document.querySelectorAll('.image-section img');
+
+    // Add click event listener to each image
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            // Toggle the highlight class on click
+            image.classList.toggle('highlight');
+        });
+    });
+</script>
+
+</body>
+</html>
